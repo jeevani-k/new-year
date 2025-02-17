@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
+
+body {
+  background-size: 100px;
+  background-image: url('C:\Users\kanne\Downloads\lights.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto Slab', serif;
+  overflow: hidden;
+}
+
+
+.card {
+    height: 300px;
+    width: 330px;
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #ede0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden
+}
+
+.card .content .image {
+    width: 150px;
+    height: 150px;
+    top: 0;
+    left: 0;
+    transition: 4s
+}
+
+.card .content .image img {
+    width: 100%;
+    height: 100%;
+    transition: all 3s;
+    border-radius: 50%;
+    transition: all 0.5s;
+    object-fit: cover
+}
+
+.card:hover .content .image img {
+    border-radius: 0%
+}
+
+.card:hover .image {
+    width: 100%;
+    height: 240px;
+    position: absolute;
+    transition: all 3s;
+    animation: image 2s
+}
+
+@keyframes image {
+    from {
+        top: 60px;
+        left: 30%
+    }
+    to {
+        top: 0px
+    }
+}
+.user-content {
+    margin-top: 10px
+}
+
+.user-content h3 {
+	margin-top: -20px;
+    text-align: center;
+    transition: all 1s;
+    transition-delay: 2s;
+    font-size: 22px;
+    letter-spacing: 2px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: -10;
+   font-family: 'Roboto Slab', serif;
+}
+
+.card:hover .user-content h3 {
+    margin-top: 60px
+}
+.credit{
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.credit a{
+    text-decoration: floralwhite;
+    color: #00C9A7;
+    font-weight: italic bold;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+#fireworksCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
